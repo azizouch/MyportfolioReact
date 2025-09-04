@@ -13,14 +13,15 @@ const About = () => {
               </span>
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Passionate developer with a love for creating innovative solutions and beautiful user experiences
+              My name is Abde Laziz, I am 26 years old, I am able to effectively carry out the mission that will be assigned. My adaptability and my team spirit will make me a good element within your team.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="w-full h-80 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-2xl flex items-center justify-center">
-                <User size={120} className="text-purple-400" />
+              <div className="w-full h-[600px] rounded-2xl flex items-center justify-center bg-[url('/bg_img_11.png')] bg-cover bg-center"
+              >
+                {/* <User size={120} className="text-purple-400" /> */}
               </div>
             </div>
 
@@ -28,7 +29,7 @@ const About = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">My Journey</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  With over 5 years of experience in web development, I specialize in creating 
+                  With over 2 years of experience in web development, I specialize in creating 
                   modern, scalable applications using React, TypeScript, and Node.js. I'm passionate 
                   about clean code, user experience, and staying up-to-date with the latest technologies.
                 </p>
@@ -42,13 +43,13 @@ const About = () => {
                 <div className="bg-gray-700/50 p-6 rounded-xl">
                   <Calendar className="text-purple-400 mb-3" size={24} />
                   <h4 className="font-semibold text-white mb-2">Experience</h4>
-                  <p className="text-gray-300">5+ Years</p>
+                  <p className="text-gray-300">2+ Years</p>
                 </div>
 
                 <div className="bg-gray-700/50 p-6 rounded-xl">
                   <MapPin className="text-cyan-400 mb-3" size={24} />
                   <h4 className="font-semibold text-white mb-2">Location</h4>
-                  <p className="text-gray-300">San Francisco, CA</p>
+                  <p className="text-gray-300">Quartier Azentou Ait Ourir Marrakech, Morroco</p>
                 </div>
               </div>
 

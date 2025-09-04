@@ -1,5 +1,7 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Facebook, Instagram } from 'lucide-react';
+import { FaWhatsapp, FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaMailBulk, FaMailchimp } from 'react-icons/fa';
+import { FaMessage } from 'react-icons/fa6';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -40,8 +42,9 @@ const Hero = () => {
             >
               Get In Touch
             </button>
-            
-            <button className="px-8 py-3 border-2 border-gray-600 rounded-lg font-semibold hover:border-purple-400 transition-all duration-300 flex items-center gap-2">
+            <button 
+            onClick={() => window.open("/my-cv.pdf", "_blank")}
+            className="px-8 py-3 border-2 border-gray-600 rounded-lg font-semibold hover:border-purple-400 transition-all duration-300 flex items-center gap-2">
               <Download size={20} />
               Download CV
             </button>
@@ -49,22 +52,47 @@ const Hero = () => {
 
           <div className="flex justify-center space-x-6">
             <a
-              href="#"
-              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+              href="https://wa.me/212617794638" 
+              target="_blank"
+              className="p-3 rounded-full bg-gray-800 hover:bg-green-500 transition-all duration-300 transform hover:scale-110"
             >
-              <Github size={24} />
+              <FaWhatsapp size={24} />
             </a>
             <a
-              href="#"
-              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+              href="https://www.facebook.com/abdelaziz.ouchwar"
+              target="_blank"
+              className="p-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
             >
-              <Linkedin size={24} />
+              <FaFacebook size={24} />
             </a>
             <a
-              href="#"
-              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+              href="https://www.instagram.com/aziz__oh/profilecard/?igsh=dzBwbGJvZGNhc2xt" 
+              target="_blank"
+              className="p-3 rounded-full bg-gray-800 hover:bg-pink-500 transition-all duration-300 transform hover:scale-110"
             >
-              <Mail size={24} />
+              <FaInstagram size={24} />
+            </a> 
+            <a
+              href="https://github.com/azizouch"
+              target="_blank"
+              className="p-3 rounded-full bg-gray-800 hover:bg-gray-600 transition-all duration-300 transform hover:scale-110"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abde-laziz-ochwar-2ba0a7257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+              target="_blank"
+              className="p-3 rounded-full bg-gray-800 hover:bg-[#0A66C2] transition-all duration-300 transform hover:scale-110"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=abdelazizochwar@gmail.com&su=Hello&body=Hi%20there!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full bg-gray-800 hover:bg-[#0099FF] transition-all duration-300 transform hover:scale-110"
+            >
+              <FaMessage size={24} />
             </a>
           </div>
         </div>

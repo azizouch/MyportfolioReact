@@ -1,0 +1,83 @@
+import React from 'react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
+
+const Hero = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-purple-500/10 blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div className="animate-fadeInUp">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="block text-gray-100">Hi, I'm</span>
+            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              Abde Laziz Ouchouar
+            </span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Full-Stack Developer crafting exceptional digital experiences with modern technologies
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button
+              onClick={scrollToContact}
+              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get In Touch
+            </button>
+            
+            <button className="px-8 py-3 border-2 border-gray-600 rounded-lg font-semibold hover:border-purple-400 transition-all duration-300 flex items-center gap-2">
+              <Download size={20} />
+              Download CV
+            </button>
+          </div>
+
+          <div className="flex justify-center space-x-6">
+            <a
+              href="#"
+              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="#"
+              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a
+              href="#"
+              className="p-3 rounded-full bg-gray-800 hover:bg-purple-600 transition-all duration-300 transform hover:scale-110"
+            >
+              <Mail size={24} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

@@ -48,7 +48,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex justify-center space-x-2 sm:space-x-6">
+          <div className="flex justify-center space-x-2 sm:space-x-6 mb-4 sm:mb-0">
             <a
               href="https://wa.me/212617794638" 
               target="_blank"

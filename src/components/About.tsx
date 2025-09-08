@@ -19,7 +19,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="w-full h-[600px] rounded-2xl flex items-center justify-center bg-[url('/bg_img_11.png')] bg-cover bg-center"
+              <div className="w-full h-[300px] sm:h-[600px]  rounded-2xl flex items-center justify-center bg-[url('/bg_img_11.png')] bg-cover bg-center"
               >
                 {/* <User size={120} className="text-purple-400" /> */}
               </div>

@@ -73,7 +73,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gray-800/50 p-8 rounded-2xl">
+            <div className="bg-gray-800/50 p-4 sm:p-8 rounded-2xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">

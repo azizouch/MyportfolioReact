@@ -30,10 +30,9 @@ const Hero = () => {
               Abde Laziz Ouchouar
             </span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl px-6 md:px-0 text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Full-Stack Developer crafting exceptional digital experiences with modern technologies
-          </p>
+          </p> 
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <button
@@ -50,7 +49,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-2 sm:space-x-6">
             <a
               href="https://wa.me/212617794638" 
               target="_blank"

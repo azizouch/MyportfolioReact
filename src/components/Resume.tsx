@@ -97,15 +97,15 @@ const Resume = () => {
                   <div key={index} className="relative">
                     {/* Timeline line */}
                     {index !== education.length - 1 && (
-                      <div className="absolute left-6 top-16 w-0.5 h-20 bg-gradient-to-b from-purple-500 to-cyan-500"></div>
+                      <div className="absolute left-4 sm:left-6  top-12 sm:top-16 w-0.5 h-20 bg-gradient-to-b from-purple-500 to-cyan-500"></div>
                     )}
                     
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></div>
                       </div>
                       
-                      <div className="bg-gray-800/50 rounded-xl p-6 flex-1 hover:bg-gray-800/70 transition-all duration-300">
+                      <div className="bg-gray-800/50 rounded-xl p-4 sm:p-6 flex-1 hover:bg-gray-800/70 transition-all duration-300">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                           <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
                           <div className="flex items-center gap-2 text-purple-400 text-sm">
@@ -142,15 +142,15 @@ const Resume = () => {
                   <div key={index} className="relative">
                     {/* Timeline line */}
                     {index !== experience.length - 1 && (
-                      <div className="absolute left-6 top-16 w-0.5 h-32 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
+                      <div className="absolute left-4 sm:left-6  top-12 sm:top-16 w-0.5 h-32 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
                     )}
                     
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></div>
                       </div>
                       
-                      <div className="bg-gray-800/50 rounded-xl p-6 flex-1 hover:bg-gray-800/70 transition-all duration-300">
+                      <div className="bg-gray-800/50 rounded-xl p-4 sm:p-6 flex-1 hover:bg-gray-800/70 transition-all duration-300">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                           <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
                           <div className="flex items-center gap-2 text-cyan-400 text-sm">

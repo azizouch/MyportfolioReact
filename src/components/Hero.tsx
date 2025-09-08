@@ -1,7 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Download, Facebook, Instagram } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaMailBulk, FaMailchimp } from 'react-icons/fa';
-import { FaMessage } from 'react-icons/fa6';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -91,7 +90,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-800 hover:bg-[#0099FF] transition-all duration-300 transform hover:scale-110"
             >
-              <FaMessage size={24} />
+              <Mail size={24} />
             </a>
           </div>
         </div>

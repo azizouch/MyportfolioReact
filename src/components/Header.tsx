@@ -47,7 +47,7 @@ const Header = () => {
           >
             <Code className="h-8 w-8 text-purple-400" />
             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              DevPortfolio
+              Portfolio
             </span>
           </div>
 

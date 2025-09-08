@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Download, Facebook, Instagram } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Facebook, Instagram, Fingerprint } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaMailBulk, FaMailchimp } from 'react-icons/fa';
 
 const Hero = () => {
@@ -48,7 +48,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex justify-center space-x-2 sm:space-x-6 mb-4 sm:mb-0">
+          <div className="flex justify-center space-x-2 sm:space-x-6 mb-6 sm:mb-0">
             <a
               href="https://wa.me/212617794638" 
               target="_blank"
@@ -97,9 +97,13 @@ const Hero = () => {
       </div>
       {/* Scroll indicator */}
       <div className="absolute bottom-6 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+        <div className="hidden sm:flex w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
+        {/* Fingerprint (only visible on small screens) */}
+      <div className="block sm:hidden text-gray-400">
+        <Fingerprint className="w-10 h-10" />
+      </div>
       </div>
       
     </section>

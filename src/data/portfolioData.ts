@@ -11,27 +11,11 @@ export const portfolioData = {
       liveUrl: "#"
     },
     {
-      title: "Task Management App",
+      title: "E-Notary Manager",
       description: "A web application designed for notary offices to efficiently manage clients and their contracts. The platform allows users to store client information, track contracts, schedule appointments, and generate reports. It streamlines administrative tasks, ensures data accuracy, and improves overall workflow within the notary office.",
       technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL", "Express"],
       image: "/notaryadmin.png",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "An interactive weather dashboard with location-based forecasts, historical data visualization, and responsive design for all devices.",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "CSS Grid"],
-      image: "/ecomdashboard2.png",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "A custom portfolio website built with modern web technologies, featuring smooth animations and optimized performance.",
-      technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "Vercel"],
-      image: "/ecomdashboard2.png",
-      githubUrl: "#",
+      githubUrl: "https://github.com/azizouch/GestionClientNotaire.git",
       liveUrl: "#"
     },
     {
@@ -40,6 +24,22 @@ export const portfolioData = {
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
       image: "/ecomdashboard2.png",
       githubUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      title: "Static Portfolio Website",
+      description: "This project is my personal portfolio website, designed and developed to showcase my skills, projects, and experience as a web developer. The goal of this portfolio is to provide a professional online presence and an interactive way for potential employers, clients, or collaborators to explore my work.",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+      image: "/MyPortfolio.png",
+      githubUrl: "https://github.com/azizouch/MyPortfolio.git",
+      liveUrl: "#"
+    },
+    {
+      title: "React Portfolio Website",
+      description: "A modern single-page portfolio application built with React to showcase my projects, skills, and experience, This portfolio demonstrates my ability to work with modern frontend frameworks and build interactive, real-world applications.",
+      technologies: ["TypeScript", "JavaScript", "Tailwind CSS", "HTML"],
+      image: "/ReactPortfolio.png",
+      githubUrl: "https://github.com/azizouch/MyportfolioReact.git",
       liveUrl: "#"
     },
     {

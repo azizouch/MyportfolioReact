@@ -6,15 +6,15 @@ export const portfolioData = {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product catalog, and payment processing.",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      icon: "🛒",
-      githubUrl: "#",
+      image: "/ecomdashboard2.png",
+      githubUrl: "https://github.com/azizouch/EcomPro.git",
       liveUrl: "#"
     },
     {
       title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      description: "A web application designed for notary offices to efficiently manage clients and their contracts. The platform allows users to store client information, track contracts, schedule appointments, and generate reports. It streamlines administrative tasks, ensures data accuracy, and improves overall workflow within the notary office.",
       technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL", "Express"],
-      icon: "📋",
+      image: "/notaryadmin.png",
       githubUrl: "#",
       liveUrl: "#"
     },
@@ -22,7 +22,7 @@ export const portfolioData = {
       title: "Weather Dashboard",
       description: "An interactive weather dashboard with location-based forecasts, historical data visualization, and responsive design for all devices.",
       technologies: ["Vue.js", "Chart.js", "OpenWeather API", "CSS Grid"],
-      icon: "🌤️",
+      image: "/ecomdashboard2.png",
       githubUrl: "#",
       liveUrl: "#"
     },
@@ -30,7 +30,7 @@ export const portfolioData = {
       title: "Portfolio Website",
       description: "A custom portfolio website built with modern web technologies, featuring smooth animations and optimized performance.",
       technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "Vercel"],
-      icon: "💼",
+      image: "/ecomdashboard2.png",
       githubUrl: "#",
       liveUrl: "#"
     },
@@ -38,7 +38,7 @@ export const portfolioData = {
       title: "Social Media App",
       description: "A social media platform with user profiles, post sharing, real-time messaging, and content moderation features.",
       technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-      icon: "📱",
+      image: "/ecomdashboard2.png",
       githubUrl: "#",
       liveUrl: "#"
     },
@@ -46,7 +46,7 @@ export const portfolioData = {
       title: "Analytics Dashboard",
       description: "A comprehensive analytics dashboard for tracking website performance, user behavior, and conversion metrics with real-time data.",
       technologies: ["Angular", "D3.js", "Python", "Docker", "AWS"],
-      icon: "📊",
+      image: "/ecomdashboard2.png",
       githubUrl: "#",
       liveUrl: "#"
     }

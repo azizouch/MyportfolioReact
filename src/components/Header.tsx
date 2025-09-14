@@ -8,17 +8,35 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // ✅ Detect active section
+      let current = "";
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          // Adjust the offset (100) depending on your navbar height
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = item.id;
+          }
+        }
+      });
+      if (current) setActive(current);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [active, setActive] = useState<string>("");
+
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setActive(sectionId); // mark this one as active
     setIsMenuOpen(false);
   };
 
@@ -57,7 +75,8 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+                className={`text-gray-300 hover:text-white transition-colors duration-200 font-medium px-3 py-1 rounded-md
+                          ${active === item.id ? "bg-gradient-to-r from-purple-600/20 to-cyan-600/20 text-purple-400" : ""}`}
               >
                 {item.label}
               </button>

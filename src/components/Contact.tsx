@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Award, Laptop, Cake } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,16 +42,6 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
-                    <Mail className="text-purple-400" size={24} />
-                  </div>
-                  <div>
-                    <p className="text-gray-300">Email</p>
-                    <p className="text-white font-medium">abdelazizochwar@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center">
                     <Phone className="text-cyan-400" size={24} />
                   </div>
@@ -62,19 +52,59 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
+                    <Mail className="text-purple-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Email</p>
+                    <p className="text-white font-medium">abdelazizochwar@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center">
                     <MapPin className="text-green-400" size={24} />
                   </div>
                   <div>
-                    <p className="text-gray-300">Location</p>
-                    <p className="text-white font-medium">Azentou Ait Ourir al Haouz, Morroco</p>
+                    <p className="text-gray-300">Address</p>
+                    <p className="text-white font-medium">Quartier Azentou Ait Ourir Marrakech, Morroco</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center">
+                    <Cake className="text-pink-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Birthday</p>
+                    <p className="text-white font-medium">January 02, 1998</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                    <Laptop className="text-blue-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Freelance</p>
+                    <p className="text-white font-medium">Available</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center">
+                    <Award className="text-yellow-400" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-gray-300">Soft skills</p>
+                    <p className="text-white font-medium">Dynamic - Serious - Responsible - Team spirit</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-gray-800/50 p-4 sm:p-8 rounded-2xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form action="https://formspree.io/f/mzzaqvgv" method="post" className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name

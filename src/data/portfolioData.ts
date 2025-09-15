@@ -1,37 +1,29 @@
-import { Code, Database, Globe, Smartphone } from 'lucide-react';
+import { Code, Database, Globe, Server, Smartphone } from 'lucide-react';
 
 export const portfolioData = {
   projects: [
     {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product catalog, and payment processing.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      technologies: ["PHP Symfony", "Twig", "CSS", "JavaScript", "SCSS", "HTML"],
       image: "/ecomdashboard2.png",
       githubUrl: "https://github.com/azizouch/EcomPro.git",
       liveUrl: "#"
     },
     {
       title: "E-Notary Manager",
-      description: "A web application designed for notary offices to efficiently manage clients and their contracts. The platform allows users to store client information, track contracts, schedule appointments, and generate reports. It streamlines administrative tasks, ensures data accuracy, and improves overall workflow within the notary office.",
-      technologies: ["React", "TypeScript", "Socket.io", "PostgreSQL", "Express"],
+      description: "A web app for notary offices to manage clients and contracts, track appointments, and generate reports, streamlining administrative tasks and improving workflow.",
+      technologies: ["PHP Symfony", "Twig", "CSS", "JavaScript", "HTML"],
       image: "/notaryadmin.png",
       githubUrl: "https://github.com/azizouch/GestionClientNotaire.git",
       liveUrl: "#"
     },
     {
-      title: "Social Media App",
-      description: "A social media platform with user profiles, post sharing, real-time messaging, and content moderation features.",
-      technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-      image: "/ecomdashboard2.png",
-      githubUrl: "#",
-      liveUrl: "#"
-    },
-    {
-      title: "Static Portfolio Website",
-      description: "This project is my personal portfolio website, designed and developed to showcase my skills, projects, and experience as a web developer. The goal of this portfolio is to provide a professional online presence and an interactive way for potential employers, clients, or collaborators to explore my work.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-      image: "/MyPortfolio.png",
-      githubUrl: "https://github.com/azizouch/MyPortfolio.git",
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce web application built with Django. Features include user authentication, product catalog, shopping cart, and order management.",
+      technologies: ["Python", "Django", "HTML", "CSS", "JavaScript"],
+      image: "/DjangoEcomFrontend.png",
+      githubUrl: "https://github.com/azizouch/EcomPro-django.git",
       liveUrl: "#"
     },
     {
@@ -43,53 +35,65 @@ export const portfolioData = {
       liveUrl: "#"
     },
     {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for tracking website performance, user behavior, and conversion metrics with real-time data.",
-      technologies: ["Angular", "D3.js", "Python", "Docker", "AWS"],
-      image: "/ecomdashboard2.png",
-      githubUrl: "#",
+      title: "Static Portfolio Website",
+      description: "A clean and responsive static portfolio built with HTML, CSS, and JavaScript to showcase my projects, skills, and experience. This portfolio highlights my ability to create interactive, visually appealing, and user-friendly web pages without relying on a backend.",
+      technologies: ["PHP", "CSS", "SCSS", "HTML", "JavaScript"],
+      image: "/MyPortfolio3.png",
+      githubUrl: "https://github.com/azizouch/MyWebSite.git",
       liveUrl: "#"
-    }
+    },
+    {
+      title: "Static Portfolio Website",
+      description: "A clean and responsive static portfolio built with HTML, CSS, and JavaScript to showcase my projects, skills, and experience. This portfolio highlights my ability to create interactive, visually appealing, and user-friendly web pages without relying on a backend.",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+      image: "/MyPortfolio.png",
+      githubUrl: "https://github.com/azizouch/MyPortfolio.git",
+      liveUrl: "#"
+    },
   ],
   skillCategories: [
     {
       name: "Frontend",
       icon: Globe,
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Next.js", level: 85 }
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 },
+        { name: "JavaScript", level: 90 },
+        { name: "React", level: 75 },
+        { name: "Tailwind CSS", level: 75 }
       ]
     },
     {
       name: "Backend",
-      icon: Database,
+      icon: Server,
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Express", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 75 }
+        { name: "PHP, PHP Symfony", level: 90 },
+        { name: "Python, Django", level: 85 },
+        { name: "C#", level: 90 },
+        { name: "Node.js", level: 70 },
+        { name: "java", level: 85 }
       ]
     },
     {
-      name: "Tools",
+      name: "Databases",
+      icon: Database,
+      skills: [
+        { name: "SQL", level: 70 },
+        { name: "MySQL", level: 80 },
+        { name: "SQLite", level: 80 },
+        { name: "Supabase", level: 80 },
+        { name: "PostgreSQL", level: 75 }
+      ]
+    },
+    {
+      name: "Tools & DevOps",
       icon: Code,
       skills: [
         { name: "Git", level: 95 },
         { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Figma", level: 85 }
-      ]
-    },
-    {
-      name: "Mobile",
-      icon: Smartphone,
-      skills: [
-        { name: "React Native", level: 80 },
-        { name: "Flutter", level: 70 },
-        { name: "iOS", level: 65 },
-        { name: "Android", level: 65 }
+        { name: "VS Code", level: 75 },
+        { name: "PyCharm", level: 85 },
+        { name: "PhpStorm", level: 90 }
       ]
     }
   ]

@@ -1,21 +1,35 @@
 import React from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import { useState } from "react";
+import { useState, useEffect  } from "react";
+
 
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  image: string;
-  githubUrl: string;
-  liveUrl: string;
-}
+    title: string;
+    description: string;
+    technologies: string[];
+    image: string;
+    githubUrl: string;
+    liveUrl: string;
+  }
 
-const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
+
+  // 🔹 Disable body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // lock scroll
+    } else {
+      document.body.style.overflow = "auto"; // unlock scroll
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // cleanup on unmount
+    };
+  }, [isOpen]);
 
   return (
     <section id="projects" className="py-20 bg-gray-900">
@@ -119,7 +133,7 @@ const [activeProject, setActiveProject] = useState<Project | null>(null);
             </button>
 
             {/* Scrollable container */}
-            <div className="mx-8 h-[90vh] overflow-y-auto">
+            <div className=" h-[90vh] overflow-y-auto">
               <img
                 src={activeProject.image}
                 alt={activeProject.title}

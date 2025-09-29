@@ -18,6 +18,8 @@ const Projects = () => {
     liveUrl: string;
   }
 
+  const projects = portfolioData.projects;
+
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   // 🔹 Disable body scroll when modal is open
@@ -49,9 +51,9 @@ const Projects = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioData.projects.map((project, index) => (
+            {projects.map((project, index) => (
               <div
-                key={index}
+                key={`${project.title}-${index}`}
                 className="bg-gray-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group shadow-xl hover:shadow-2xl"
               >
                 {/* <div className="h-48 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 p-8 flex items-center justify-center">
@@ -66,10 +68,10 @@ const Projects = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-purple-400 transition-colors">
-                    {project.title}
+                    {t(`projects.portfolioData.${index}.title`, project.title)}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {project.description}
+                    {t(`projects.portfolioData.${index}.description`, project.description)}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -90,7 +92,7 @@ const Projects = () => {
                       className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
                     >
                       <Github size={18} />
-                      <span>Code</span>
+                      <span>{t('projects.code', 'Code')}</span>
                     </a>
                     <a
                       href="#"
@@ -102,7 +104,7 @@ const Projects = () => {
                       className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       <Eye size={18} />
-                      <span>Live Demo</span>
+                      <span>{t('projects.liveDemo', 'Live Demo')}</span>
                     </a>
                   </div>
                 </div>
@@ -112,7 +114,8 @@ const Projects = () => {
 
           <div className="text-center mt-12">
             <a
-              href="#"
+              href="https://github.com/azizouch"
+              target="_blank"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-purple-500 rounded-lg hover:bg-purple-500 transition-all duration-300"
             >
               <Github size={20} />

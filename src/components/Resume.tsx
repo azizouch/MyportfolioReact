@@ -1,11 +1,31 @@
 import React from 'react';
-import { GraduationCap, Briefcase, Calendar, MapPin } from 'lucide-react';
+import { GraduationCap, Briefcase, Calendar, MapPin, Download } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+interface Education {
+  degree: string;
+  period: string;
+  institution: string;
+  location: string;
+  description: string;
+}
+
+interface Experience {
+  title: string;
+  period: string;
+  company: string;
+  location: string;
+  responsibilities: string[];
+}
 
 const Resume = () => {
   const { t, i18n } = useTranslation();
-  const education = t('resume.education', { returnObjects: true }) as any[];
-  const experience = t('resume.experience', { returnObjects: true }) as any[];
+
+  const rawEducation = t('resume.education', { returnObjects: true });
+  const education: Education[] = Array.isArray(rawEducation) ? rawEducation : rawEducation ? [rawEducation] : [];
+
+  const rawExperience = t('resume.experience', { returnObjects: true });
+  const experience: Experience[] = Array.isArray(rawExperience) ? rawExperience : rawExperience ? [rawExperience] : [];
 
   return (
     <section id="resume" className="py-20 bg-gray-900" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
@@ -34,7 +54,7 @@ const Resume = () => {
 
               <div className="space-y-8">
                 {education.map((edu, index) => (
-                  <div key={index} className="relative">
+                  <div key={edu.degree + index} className="relative">
                     {/* Timeline line */}
                     {index !== education.length - 1 && (
                       <div className="absolute left-4 sm:left-6  top-12 sm:top-16 w-0.5 h-20 bg-gradient-to-b from-purple-500 to-cyan-500"></div>
@@ -79,7 +99,7 @@ const Resume = () => {
 
               <div className="space-y-8">
                 {experience.map((exp, index) => (
-                  <div key={index} className="relative">
+                  <div key={exp.title + index} className="relative">
                     {/* Timeline line */}
                     {index !== experience.length - 1 && (
                       <div className="absolute left-4 sm:left-6  top-12 sm:top-16 w-0.5 h-32 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
@@ -106,8 +126,8 @@ const Resume = () => {
                         </div>
                         
                         <ul className="space-y-2">
-                          {exp.responsibilities.map((responsibility, idx) => (
-                            <li key={idx} className="text-gray-300 leading-relaxed flex items-start gap-2">
+                          {Array.isArray(exp.responsibilities) && exp.responsibilities.map((responsibility, idx) => (
+                            <li key={`${responsibility}-${idx}`} className="text-gray-300 leading-relaxed flex items-start gap-2">
                               <div className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                               <span>{responsibility}</span>
                             </li>
@@ -124,7 +144,7 @@ const Resume = () => {
           {/* Download Resume Button */}
           <div className="text-center mt-16">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-3 mx-auto">
-              <GraduationCap size={20} />
+              <Download size={20} />
               {t('resume.download')}
             </button>
           </div>

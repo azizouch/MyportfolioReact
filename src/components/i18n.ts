@@ -105,10 +105,38 @@ i18n
               },
             ],
           },
-          projects: {
+                    projects: {
             title: 'Featured Projects',
             subtitle: 'A showcase of my recent work and personal projects that demonstrate my skills and passion for development',
             viewAll: 'View All Projects',
+            code: 'Code',
+            liveDemo: 'Live Demo',
+            portfolioData: [
+              {
+                title: "E-Commerce Platform",
+                description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product catalog, and payment processing."
+              },
+              {
+                title: "E-Notary Manager",
+                description: "A web app for notary offices to manage clients and contracts, track appointments, and generate reports, streamlining administrative tasks and improving workflow."
+              },
+              {
+                title: "E-Commerce Platform",
+                description: "A full-stack e-commerce web application built with Django. Features include user authentication, product catalog, shopping cart, and order management."
+              },
+              {
+                title: "React Portfolio Website",
+                description: "A modern single-page portfolio application built with React to showcase my projects, skills, and experience, This portfolio demonstrates my ability to work with modern frontend frameworks and build interactive, real-world applications."
+              },
+              {
+                title: "Static Portfolio Website",
+                description: "A clean and responsive static portfolio built with HTML, CSS, and JavaScript to showcase my projects, skills, and experience. This portfolio highlights my ability to create interactive, visually appealing, and user-friendly web pages without relying on a backend."
+              },
+              {
+                title: "Static Portfolio Website",
+                description: "A clean and responsive static portfolio built with HTML, CSS, and JavaScript to showcase my projects, skills, and experience. This portfolio highlights my ability to create interactive, visually appealing, and user-friendly web pages without relying on a backend."
+              }
+            ]
           },
           skills: {
             title: 'Skills & Technologies',
@@ -158,7 +186,7 @@ i18n
       ar: {
         translation: {
           hero: {
-            name: 'عبد العزيز أشوار',
+            name: 'عبد العزيز أوشوار',
             greeting: 'مرحباً، أنا',
             title:
               'أنا مطور Full Stack شغوف ومتخصص في إنشاء تطبيقات ويب حديثة وقابلة للتطوير.',
@@ -245,10 +273,38 @@ i18n
               },
             ],
           },
-          projects: {
+                    projects: {
             title: 'مشاريع مميزة',
             subtitle: 'عرض لأعمالي الأخيرة ومشاريعي الشخصية التي تظهر مهاراتي وشغفي بالتطوير',
             viewAll: 'عرض كل المشاريع',
+            code: 'الكود',
+            liveDemo: 'معاينة مباشرة',
+            portfolioData: [
+              {
+                title: "منصة التجارة الإلكترونية",
+                description: "حل تجارة إلكترونية كامل مع React و Node.js ودمج Stripe. تتضمن الميزات المصادقة على المستخدم وكتالوج المنتجات ومعالجة الدفع."
+              },
+              {
+                title: "مدير الموثق الإلكتروني",
+                description: "تطبيق ويب لمكاتب التوثيق لإدارة العملاء والعقود وتتبع المواعيد وإنشاء التقارير، مما يبسط المهام الإدارية ويحسن سير العمل."
+              },
+              {
+                title: "منصة التجارة الإلكترونية",
+                description: "تطبيق ويب للتجارة الإلكترونية مبني بـ Django. تتضمن الميزات المصادقة على المستخدم وكتالوج المنتجات وعربة التسوق وإدارة الطلبات."
+              },
+              {
+                title: "موقع ملف شخصي React",
+                description: "تطبيق ملف شخصي حديث من صفحة واحدة مبني بـ React لعرض مشاريعي ومهاراتي وخبرتي. يوضح هذا الملف الشخصي قدرتي على العمل مع أطر العمل الحديثة للواجهة الأمامية وبناء تطبيقات تفاعلية وواقعية."
+              },
+              {
+                title: "موقع ملف شخصي ثابت",
+                description: "ملف شخصي ثابت نظيف ومتجاوب مبني بـ HTML و CSS و JavaScript لعرض مشاريعي ومهاراتي وخبرتي. يبرز هذا الملف الشخصي قدرتي على إنشاء صفحات ويب تفاعلية وجذابة بصريًا وسهلة الاستخدام دون الاعتماد على الواجهة الخلفية."
+              },
+              {
+                title: "موقع ملف شخصي ثابت",
+                description: "ملف شخصي ثابت نظيف ومتجاوب مبني بـ HTML و CSS و JavaScript لعرض مشاريعي ومهاراتي وخبرتي. يبرز هذا الملف الشخصي قدرتي على إنشاء صفحات ويب تفاعلية وجذابة بصريًا وسهلة الاستخدام دون الاعتماد على الواجهة الخلفية."
+              }
+            ]
           },
           skills: {
             title: 'المهارات والتقنيات',
@@ -385,10 +441,38 @@ i18n
               },
             ],
           },
-          projects: {
+                    projects: {
             title: 'Projets en vedette',
             subtitle: "Une vitrine de mes travaux récents et projets personnels qui démontrent mes compétences et ma passion pour le développement",
             viewAll: 'Voir tous les projets',
+            code: 'Code',
+            liveDemo: 'Démo en direct',
+            portfolioData: [
+              {
+                title: "Plateforme de commerce électronique",
+                description: "Une solution de commerce électronique complète avec React, Node.js et intégration Stripe. Les fonctionnalités incluent l'authentification utilisateur, le catalogue de produits et le traitement des paiements."
+              },
+              {
+                title: "Gestionnaire de notaire électronique",
+                description: "Une application web pour les bureaux de notaire pour gérer les clients et les contrats, suivre les rendez-vous et générer des rapports, rationalisant les tâches administratives et améliorant le flux de travail."
+              },
+              {
+                title: "Plateforme de commerce électronique",
+                description: "Une application web de commerce électronique complète construite avec Django. Les fonctionnalités incluent l'authentification utilisateur, le catalogue de produits, le panier d'achat et la gestion des commandes."
+              },
+              {
+                title: "Site portfolio React",
+                description: "Une application portfolio moderne d'une seule page construite avec React pour présenter mes projets, compétences et expérience. Ce portfolio démontre ma capacité à travailler avec des frameworks frontend modernes et à créer des applications interactives et réelles."
+              },
+              {
+                title: "Site portfolio statique",
+                description: "Un portfolio statique propre et réactif construit avec HTML, CSS et JavaScript pour présenter mes projets, compétences et expérience. Ce portfolio met en évidence ma capacité à créer des pages web interactives, visuellement attrayantes et conviviales sans dépendre d'un backend."
+              },
+              {
+                title: "Site portfolio statique",
+                description: "Un portfolio statique propre et réactif construit avec HTML, CSS et JavaScript pour présenter mes projets, compétences et expérience. Ce portfolio met en évidence ma capacité à créer des pages web interactives, visuellement attrayantes et conviviales sans dépendre d'un backend."
+              }
+            ]
           },
           skills: {
             title: 'Compétences & Technologies',

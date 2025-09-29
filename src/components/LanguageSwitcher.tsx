@@ -41,8 +41,8 @@ const LanguageSwitcher = () => {
         <ChevronDown size={16} className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
-      {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-36 bg-gray-800/95 backdrop-blur-sm rounded-md shadow-lg overflow-hidden z-50 border border-gray-700">
+                  {isOpen && (
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-36 bg-gray-800/95 backdrop-blur-sm rounded-md shadow-lg overflow-hidden z-50 border border-gray-700">
           <ul className="text-gray-300">
             {languages.map((lang) => (
               <li key={lang.code}>

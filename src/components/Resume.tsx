@@ -1,84 +1,24 @@
 import React from 'react';
 import { GraduationCap, Briefcase, Calendar, MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Resume = () => {
-  const education = [
-    {
-      degree: "Baccalaureate",
-      period: "2017 - 2018",
-      institution: "LYCEE ABTIH",
-      location: "Ait Ourir",
-      description: "Life and Earth Science"
-    },
-    {
-      degree: "Diploma",
-      period: "2019 - 2020",
-      institution: "ISTA NTIC SYBA",
-      location: "Marrakech",
-      description: "Specialized Technician in IT Development"
-    },
-    {
-      degree: "Certificate",
-      period: "2021 - 2022",
-      institution: "ISTA NTIC SYBA",
-      location: "Marrakech",
-      description: "Qualifying Training in Python"
-    },
-    {
-      degree: "Baccalaureate",
-      period: "2021 - 2022",
-      institution: "LYCEE ABTIH",
-      location: "Ait Ourir",
-      description: "Free Baccalaureate in Letters and Human Sciences"
-    }
-  ];
-
-  const experience = [
-    {
-      title: "INTERN",
-      period: "03/2020 - 05/2020",
-      company: "M.SAYSY company",
-      location: "Casablanca",
-      responsibilities: [
-        "Development and creation of a desktop stock management application"
-      ]
-    },
-    {
-      title: "STOCK MANAGER",
-      period: "05/2020 - 10/2020",
-      company: "M.SAYSY company",
-      location: "Casablanca",
-      responsibilities: [
-        "Manage negative and positive stocks of raw materials",
-        "Receive and issue orders"
-      ]
-    },
-    {
-      title: "EMPLOYEE",
-      period: "10/2024 - 12/2024",
-      company: "Notary.Teacher Kamal Boutaskiouine",
-      location: "Marrakech",
-      responsibilities: [
-        "Creating contracts in Word",
-        "Saving contracts in Tawtik website and organizing files",
-        "Creating general lists of clients in Excel",
-        "Signing contracts with customers"
-      ]
-    }
-  ];
+  const { t, i18n } = useTranslation();
+  const education = t('resume.education', { returnObjects: true }) as any[];
+  const experience = t('resume.experience', { returnObjects: true }) as any[];
 
   return (
-    <section id="resume" className="py-20 bg-gray-900">
+    <section id="resume" className="py-20 bg-gray-900" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Resume
+                {t('resume.title')}
               </span>
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              My educational background and professional journey in web development
+              {t('resume.subtitle')}
             </p>
           </div>
 
@@ -89,7 +29,7 @@ const Resume = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-xl flex items-center justify-center">
                   <GraduationCap className="text-purple-400" size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Education</h3>
+                <h3 className="text-2xl font-bold text-white">{t('resume.educationTitle')}</h3>
               </div>
 
               <div className="space-y-8">
@@ -134,7 +74,7 @@ const Resume = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-xl flex items-center justify-center">
                   <Briefcase className="text-cyan-400" size={24} />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Professional Experience</h3>
+                <h3 className="text-2xl font-bold text-white">{t('resume.experienceTitle')}</h3>
               </div>
 
               <div className="space-y-8">
@@ -185,7 +125,7 @@ const Resume = () => {
           <div className="text-center mt-16">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-3 mx-auto">
               <GraduationCap size={20} />
-              Download Full Resume
+              {t('resume.download')}
             </button>
           </div>
         </div>

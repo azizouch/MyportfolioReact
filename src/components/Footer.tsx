@@ -1,14 +1,18 @@
 import React from 'react';
 import { Code, Github, Linkedin, Mail, Heart } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaMailBulk, FaMailchimp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const quickLinks = ['about', 'resume', 'projects', 'skills', 'contact'];
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-gray-800 border-t border-gray-700">
+    <footer className="bg-gray-800 border-t border-gray-700" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
@@ -19,12 +23,11 @@ const Footer = () => {
               >
                 <Code className="h-8 w-8 text-purple-400" />
                 <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  Portfolio
+                  {t('header.portfolio')}
                 </span>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Crafting digital experiences with passion and precision. 
-                Let's build something amazing together.
+                {t('footer.description')}
               </p>
               <div className="flex space-x-4">
                 
@@ -75,20 +78,20 @@ const Footer = () => {
             </div>
 
             <div className="md:col-span-1">
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2">
-                {['About', 'Resume', 'Projects', 'Skills', 'Contact'].map((item) => (
+                {quickLinks.map((item) => (
                   <li key={item}>
                     <button
                       onClick={() => {
-                        const element = document.getElementById(item.toLowerCase());
+                        const element = document.getElementById(item);
                         if (element) {
                           element.scrollIntoView({ behavior: 'smooth' });
                         }
                       }}
                       className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
                     >
-                      {item}
+                      {t(`header.${item}`)}
                     </button>
                   </li>
                 ))}
@@ -96,13 +99,11 @@ const Footer = () => {
             </div>
 
             <div className="md:col-span-1">
-              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">{t('footer.services')}</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Web Development</li>
-                <li>Frontend Development</li>
-                <li>Backend Development</li>
-                <li>UI/UX Design</li>
-                <li>Consulting</li>
+                {t('footer.servicesList', { returnObjects: true }).map((service: string) => (
+                  <li key={service}>{service}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -110,10 +111,10 @@ const Footer = () => {
           <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0 flex items-center gap-2">
-                © 2025 Abde Laziz Ouchouar. Made with <Heart size={16} className="text-red-500" /> and lots of coffee.
+                {t('footer.copyright')} <Heart size={16} className="text-red-500" /> {t('footer.and')} {t('footer.coffee')}
               </p>
               <p className="text-gray-400 text-sm">
-                Built with React & Tailwind CSS
+                {t('footer.builtWith')}
               </p>
             </div>
           </div>

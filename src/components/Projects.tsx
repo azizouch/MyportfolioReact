@@ -2,10 +2,12 @@ import React from 'react';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { useState, useEffect  } from "react";
+import { useTranslation } from 'react-i18next';
 
 
 const Projects = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   interface Project {
     title: string;
@@ -32,17 +34,17 @@ const Projects = () => {
   }, [isOpen]);
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <section id="projects" className="py-20 bg-gray-900" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Featured Projects
+                {t('projects.title')}
               </span>
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              A showcase of my recent work and personal projects that demonstrate my skills and passion for development
+              {t('projects.subtitle')}
             </p>
           </div>
 
@@ -114,7 +116,7 @@ const Projects = () => {
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-purple-500 rounded-lg hover:bg-purple-500 transition-all duration-300"
             >
               <Github size={20} />
-              View All Projects
+              {t('projects.viewAll')}
             </a>
           </div>
         </div>

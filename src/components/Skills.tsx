@@ -1,19 +1,22 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+  const { t, i18n } = useTranslation();
+
   return (
-    <section id="skills" className="py-20 bg-gray-800/50">
+    <section id="skills" className="py-20 bg-gray-800/50" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Skills & Technologies
+                {t('skills.title')}
               </span>
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              The tools and technologies I use to bring ideas to life
+              {t('skills.subtitle')}
             </p>
           </div>
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Download, Facebook, Instagram, Fingerprint } from 'lucide-react';
 import { FaWhatsapp, FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaMailBulk, FaMailchimp } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -11,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-cyan-900/20"></div>
       
@@ -24,13 +26,13 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fadeInUp">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="block text-gray-100">Hi, I'm</span>
+            <span className="block text-gray-100">{t('hero.greeting')}</span>
             <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Abde Laziz Ouchouar
+              {t('hero.name')}
             </span>
           </h1>
           <p className="text-xl md:text-2xl px-6 md:px-0 text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Full-Stack Developer crafting exceptional digital experiences with modern technologies
+            {t('hero.title')}
           </p> 
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -38,13 +40,13 @@ const Hero = () => {
               onClick={scrollToContact}
               className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Get In Touch
+              {t('hero.getInTouch')}
             </button>
             <button 
             onClick={() => window.open("/my-cv.pdf", "_blank")}
             className="px-8 py-3 border-2 border-gray-600 rounded-lg font-semibold hover:border-purple-400 transition-all duration-300 flex items-center gap-2">
               <Download size={20} />
-              Download CV
+              {t('hero.downloadCV')}
             </button>
           </div>
 
